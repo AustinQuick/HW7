@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="PlayesPage.aspx.vb" Inherits="Admin_PlayesPage" %>
 
 <!DOCTYPE html>
 
@@ -40,21 +40,26 @@
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" DataSourceID="sql_Default" AutoGenerateColumns="False" DataKeyNames="pID">
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                <asp:BoundField DataField="pID" HeaderText="Player ID" InsertVisible="false" ReadOnly="true" sortExpression="pID" />
                 <asp:BoundField DataField="pFN" HeaderText="First Name" sortExpression="pFN" />
                 <asp:BoundField DataField="pLN" HeaderText="Last Name" sortExpression="pLN" />
-                <asp:BoundField DataField="pUni" HeaderText="University" sortExpression="pUni" />
-                <asp:BoundField DataField="pHeight" HeaderText="Height" sortExpression="pHeight" />
-                <asp:BoundField DataField="pWeight" HeaderText="Weight" sortExpression="pWeight" />
-                <asp:BoundField DataField="pPosition" HeaderText="Position" sortExpression="pPosition" />
-                <asp:BoundField DataField="pPPG" HeaderText="Points Per Game" sortExpression="pPPG" />
-                <asp:BoundField DataField="pRPG" HeaderText="Rebounds Per Game" sortExpression="pRPG" />
-                <asp:BoundField DataField="pAPG" HeaderText="Assists Per Game" sortExpression="pAPG" />
+                <asp:BoundField DataField="pUni" HeaderText="University" sortExpression="pLN" />
+                <asp:HyperLinkField DataNavigateUrlFields="pID" DataNavigateUrlFormatString="PropsectDetails.aspx?pID={0}" Text="View Prospect" />
             </Columns>
 
         </asp:GridView>
-
+        
     </div>
+
+        <br />
+     
+
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin/NewDraftProspect.aspx">Add A New Prospect</asp:HyperLink>
+   
+        <br />
+        <br />    
+
+        <asp:Label ID="lbl_DeletedProspect" runat="server" Text="Label"></asp:Label> 
+
     </form>
 </body>
 </html>
