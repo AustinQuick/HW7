@@ -1,10 +1,11 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="PlayersPage.aspx.vb" Inherits="_PlayersPage" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Quick's NBA Draft Rankings</title>
+    <link rel="stylesheet" type="text/css" href="~/css/Style.css"/>
 </head>
 <body>
     <form id="form1" runat="server">

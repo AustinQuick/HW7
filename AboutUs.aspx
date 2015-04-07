@@ -1,47 +1,10 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="AboutUs.aspx.vb" Inherits="AboutUs" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Prospects.master" AutoEventWireup="false" CodeFile="AboutUs.aspx.vb" Inherits="AboutUs" %>
 
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
 
-
-
-<!DOCTYPE html>
-
-
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head runat="server">
-
-    <title>About Us</title>
-
-    <link rel="stylesheet" type="text/css" href="Style.css" />
-
-</head>
-
-<body>
-
-
-
-
-    <form id="form1" runat="server">
-
-    <div>
-
-    
-
-    </div>
-
-    </form>
-
-
-
-
-
-
-
-       <p class="AboutUs">
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+   <p style="text-align: center; vertical-align: middle"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
         Nulla aliquet, tellus sit amet feugiat euismod, velit lectus pellentesque nisi, non eleifend quam ipsum at arcu. 
 
@@ -95,16 +58,7 @@
         Aenean imperdiet tellus nec augue elefiend condimentum.
 
 
+   </p>
 
+</asp:Content>
 
-
-
-
-    </p>
-
-
-
-
-</body>
-
-</html>

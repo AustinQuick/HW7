@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Prospect Details</title>
+    <link rel="stylesheet" type="text/css" href="~/css/Style.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -59,7 +60,7 @@
         <br />
        
 
-        <asp:Label ID="lbl_deletedProspect" runat="server" Text="Label"></asp:Label>
+       <span class ="deletedProspect"> <asp:Label ID="lbl_deletedProspect" runat="server" Text="Label"></asp:Label></span>
 
     </div>
     </form>

@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Add New Prospect</title>
+    <link rel="stylesheet" type="text/css" href="~/css/Style.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -40,6 +41,9 @@
         </asp:SqlDataSource>
 
 <asp:detailsview runat="server" height="50px" width="125px" AutoGenerateRows="False" DataKeyNames="pID" DataSourceID="Sql_PlayerData" ID="DetailsView1" DefaultMode="Insert">
+    <EmptyDataTemplate>
+        Please enter a value!
+    </EmptyDataTemplate>
     <Fields>
         <asp:BoundField DataField="pFN" HeaderText="First Name" SortExpression="pFN" />
         <asp:BoundField DataField="pLN" HeaderText="Last Name" SortExpression="pLN" />
@@ -52,6 +56,7 @@
         <asp:BoundField DataField="pAPG" HeaderText="Assists Per Game" SortExpression="pAPG" />
         <asp:CommandField ShowInsertButton="True" />
     </Fields>
+
         </asp:detailsview>
 
 

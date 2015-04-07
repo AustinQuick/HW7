@@ -14,7 +14,7 @@
 
     <title>Contact Us!</title>
 
-    <link rel="stylesheet" type="text/css" href="Style.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/Style.css"/>
 
 </head>
 

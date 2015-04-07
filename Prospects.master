@@ -1,0 +1,67 @@
+﻿<%@ Master Language="VB" CodeFile="prospects.master.vb" Inherits="prospects" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 875px;
+            height: 600px;
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="container">
+        <div id="header">
+            <h1>Quick's Top NBA Draft Prospects</h1>
+            <h3> An in-depth look at the 2015 NBA Draft</h3>
+        </div>
+
+        <div id="right_header">
+            
+
+
+            <asp:Image ID="Logo" runat="server" Height="155px" ImageUrl="~/css/NBA.jpg" Width="100px" />
+            
+
+
+            </div>
+
+            <div id="menu">
+            <ul id="nav">
+                <li><asp:HyperLink ID="linkHome" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></li>
+                <li><asp:HyperLink ID="linkProspects" runat="server" NavigateUrl="~/PlayersPage.aspx">View Prospects</asp:HyperLink></li>
+                <li><asp:HyperLink ID="linkAdmin" runat="server" NavigateUrl="~/admin/Default.aspx">Admin</asp:HyperLink></li>
+                <li><asp:HyperLink ID="linkAboutUs" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink></li>
+                <li><asp:HyperLink ID="linkContactUs" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink></li>
+                <li><asp:HyperLink ID="linkSearch" runat="server" NavigateUrl="~/search.aspx">Search</asp:HyperLink></li>
+                <li><asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
+            </ul>
+            </div>
+
+        <div id="main">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                <p>
+                 
+        
+            </asp:ContentPlaceHolder>
+        </div>
+
+    <div id="footer">
+        &copy; 2015 MSCI:3300 - Software Design and Development Today&#39;s Date is:
+         <asp:Label ID="lbl_date" runat="server" Text="lbl_date"></asp:Label>
+&nbsp;<asp:Label ID="lbl_time" runat="server" Text="lbl_time"></asp:Label>
+    </div>
+
+    </div>
+    </form>
+</body>
+</html>
