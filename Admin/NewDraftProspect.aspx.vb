@@ -1,5 +1,5 @@
 ﻿
-Partial Class NewDraftProspect
+Partial Class Admin_NewDraftProspect
     Inherits System.Web.UI.Page
 
 

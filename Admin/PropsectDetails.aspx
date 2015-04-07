@@ -1,16 +1,10 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="PropsectDetails.aspx.vb" Inherits="PropsectDetails" %>
+﻿<%@ Page Language="VB" MasterPageFile="~/Prospects.master" AutoEventWireup="false" CodeFile="PropsectDetails.aspx.vb" Inherits="Admin_PropsectDetails" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Prospect Details</title>
-    <link rel="stylesheet" type="text/css" href="~/css/Style.css"/>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [amquick_HW7] WHERE ([pID] = @pID)" DeleteCommand="DELETE FROM [amquick_HW7] WHERE [pID] = @pID" InsertCommand="INSERT INTO [amquick_HW7] ([pFN], [pLN], [pUni], [pHeight], [pWeight], [pPosition], [pPPG], [pRPG], [pAPG]) VALUES (@pFN, @pLN, @pUni, @pHeight, @pWeight, @pPosition, @pPPG, @pRPG, @pAPG)" UpdateCommand="UPDATE [amquick_HW7] SET [pFN] = @pFN, [pLN] = @pLN, [pUni] = @pUni, [pHeight] = @pHeight, [pWeight] = @pWeight, [pPosition] = @pPosition, [pPPG] = @pPPG, [pRPG] = @pRPG, [pAPG] = @pAPG WHERE [pID] = @pID">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [amquick_HW7] WHERE ([pID] = @pID)" DeleteCommand="DELETE FROM [amquick_HW7] WHERE [pID] = @pID" InsertCommand="INSERT INTO [amquick_HW7] ([pFN], [pLN], [pUni], [pHeight], [pWeight], [pPosition], [pPPG], [pRPG], [pAPG]) VALUES (@pFN, @pLN, @pUni, @pHeight, @pWeight, @pPosition, @pPPG, @pRPG, @pAPG)" UpdateCommand="UPDATE [amquick_HW7] SET [pFN] = @pFN, [pLN] = @pLN, [pUni] = @pUni, [pHeight] = @pHeight, [pWeight] = @pWeight, [pPosition] = @pPosition, [pPPG] = @pPPG, [pRPG] = @pRPG, [pAPG] = @pAPG WHERE [pID] = @pID">
             <DeleteParameters>
                 <asp:Parameter Name="pID" Type="Int32" />
             </DeleteParameters>
@@ -42,7 +36,9 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     
-        <asp:detailsview runat="server" height="50px" width="125px" AutoGenerateRows="False" DataSourceID="SqlDataSource1" DataKeyNames="pID" ID="DetailsView">
+        <asp:detailsview runat="server" height="50px" width="125px" AutoGenerateRows="False" DataSourceID="SqlDataSource1" DataKeyNames="pID" ID="DetailsView" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" HorizontalAlign="Center">
+            <AlternatingRowStyle BackColor="#FF6600" />
+            <EditRowStyle BackColor="#FF6600" Font-Bold="True" ForeColor="White" />
             <Fields>
                 <asp:BoundField DataField="pFN" HeaderText="First Name" SortExpression="pFN" />
                 <asp:BoundField DataField="pLN" HeaderText="Last Name" SortExpression="pLN" />
@@ -55,6 +51,9 @@
                 <asp:BoundField DataField="pAPG" HeaderText="APG" SortExpression="pAPG" />
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             </Fields>
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
         </asp:detailsview>
 
         <br />
@@ -62,7 +61,5 @@
 
        <span class ="deletedProspect"> <asp:Label ID="lbl_deletedProspect" runat="server" Text="Label"></asp:Label></span>
 
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+

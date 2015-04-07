@@ -1,46 +1,10 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="ContactUs.aspx.vb" Inherits="ContactUs" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Prospects.master" AutoEventWireup="false" CodeFile="ContactUs.aspx.vb" Inherits="ContactUs" %>
 
-
-
-
-<!DOCTYPE html>
-
-
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head runat="server">
-
-    <title>Contact Us!</title>
-
-    <link rel="stylesheet" type="text/css" href="~/css/Style.css"/>
-
-</head>
-
-
-
-
-
-
-
-
-
-
-<body>
-
-    <form id="form1" runat="server">
-
-    <div>
-
-    
-
-    </div>
-
-
-
-
-         <!-- Check to see if you are in postback.  If not, display the contact form. -->
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <head>Contact Us!</head>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+             <!-- Check to see if you are in postback.  If not, display the contact form. -->
 
         <% If Not IsPostBack Then%>
 
@@ -123,14 +87,5 @@
 
         </p>
 
+</asp:Content>
 
-
-
-
-
-
-    </form>
-
-</body>
-
-</html>

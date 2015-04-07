@@ -1,5 +1,4 @@
-﻿
-Partial Class PropsectDetails
+﻿Partial Class Admin_PropsectDetails
     Inherits System.Web.UI.Page
 
 

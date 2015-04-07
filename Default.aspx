@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-     <img class="center_img" src="./images/AW.jpg" alt="NFL teams logo"  />
+     <img class="center_img" src="./images/AW.jpg" alt="Andrew Wiggins"  />
 
 </asp:Content>
 

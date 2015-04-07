@@ -1,9 +1,8 @@
 ﻿Imports System.Net.Mail
 Imports System.Net
 
-
-
 Partial Class ContactUs
+
 
     Inherits System.Web.UI.Page
 
@@ -91,3 +90,4 @@ Partial Class ContactUs
 
 
 End Class
+

@@ -38,11 +38,11 @@
             <ul id="nav">
                 <li><asp:HyperLink ID="linkHome" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></li>
                 <li><asp:HyperLink ID="linkProspects" runat="server" NavigateUrl="~/PlayersPage.aspx">View Prospects</asp:HyperLink></li>
-                <li><asp:HyperLink ID="linkAdmin" runat="server" NavigateUrl="~/admin/Default.aspx">Admin</asp:HyperLink></li>
+                <li><asp:HyperLink ID="linkAdmin" runat="server" NavigateUrl="~/login/login.aspx">Admin</asp:HyperLink></li>
                 <li><asp:HyperLink ID="linkAboutUs" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink></li>
                 <li><asp:HyperLink ID="linkContactUs" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink></li>
                 <li><asp:HyperLink ID="linkSearch" runat="server" NavigateUrl="~/search.aspx">Search</asp:HyperLink></li>
-                <li><asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
+                <li><asp:LoginStatus ID="Login1" runat="server" /></li>
             </ul>
             </div>
 
